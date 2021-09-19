@@ -1,0 +1,21 @@
+{
+
+    "manifest_version": 2,
+    "name": "Devinci Override",
+    "version": "1.0",
+  
+    "description": "Vivre mieux avec son portail !",
+  
+    "icons": {
+      "48": "Logo_De_Vinci_fd_noir.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.leonard-de-vinci.net/*"],
+        "js": ["override-devinci.js"],
+        "css": ["override-devinci.css"]
+      }
+    ]
+  
+  }

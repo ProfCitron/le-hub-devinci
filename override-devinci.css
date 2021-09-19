@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+
+.devinci-custom {
+    font-family: "Poppins", sans-serif;
+}
+
+.devinci-custom .social-sidebar {
+    background-color: #1c1c1c;
+    border-right: 4px solid #6758a2;
+}
+
+.devinci-custom .social-sidebar span {
+    font-weight: 500;
+}
+
+.devinci-custom .social-sidebar img {
+    display: none;
+}
+
+.devinci-custom .social-sidebar img.avatar {
+    display: block;
+    object-fit: cover;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    border: 3px solid #6758a2;
+}
+
+.devinci-custom .social-sidebar .menu .accordion-group .accordion-heading a {
+    color: #fff;
+}
+
+.devinci-custom .social-sidebar .menu .accordion-group .accordion-heading .accordion-toggle {
+    padding: 12px 8px;
+}
+
+.devinci-custom .navigation-sidebar {
+    float: left;
+    color: #fff;
+    padding: 10px 20px 10px 0;
+}
+.devinci-custom .navigation-sidebar:hover {
+    cursor: pointer;
+}
+
+.devinci-custom .navigation-sidebar i {
+    font-size: 20px;
+}
+
+.devinci-custom .social-sidebar .user {
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.devinci-custom {
+    background-color: #EEF0F8;
+}
+
+.devinci-custom .social-sidebar .menu .accordion-group.active .accordion-heading a::after { 
+    display: none;
+}
+
+.devinci-custom .social-sidebar .menu .accordion-group .accordion-heading .accordion-toggle:hover, 
+.devinci-custom .social-sidebar .menu .accordion-group .accordion-heading .accordion-toggle.opened {
+    background-color: #6758a2;
+}
+
+.devinci-custom .navbar-inner {
+    background-color: #1c1c1c !important;
+    border-width: 0;
+    box-shadow: rgba(82, 63, 105, 0.08) 0px 10px 30px 0px;
+}
+
+.devinci-custom .navbar-inner .brand, 
+.devinci-custom .navbar-inner .nav > li > a {
+    text-shadow: none !important;
+    color: #fff !important;
+}
+
+.devinci-custom .tools {
+    text-align: center;
+}
+
+.devinci-custom .tools .btn {
+    background-image: none;
+    border: none;
+    text-shadow: none;
+    background-color: #6758a2;
+    background-color: #1c1c1c;
+    color: white;
+    padding: 0.55rem 0.75rem;
+    font-size: 0.925rem;
+    line-height: 1.35;
+    border-radius: 0.42rem;
+    margin-bottom: 20px;
+}
+
+.devinci-custom .tools .btn i {
+    margin-right: 5px;
+}
+
+.devinci-custom .schoole_pastil {
+    background: none;
+    border: none;
+    display: none;
+}
+
+.devinci-custom .social-sidebar .user {
+    background-color: #1c1c1b;
+    color: #fff;
+    border-bottom: 1px solid #1c1c1b;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: auto;
+    max-height: none;
+}
+
+.devinci-custom .social-sidebar.sidebar-full .user span {
+    text-align: center;
+    text-transform: capitalize;
+    display: block;
+    font-size: 14px;
+    display: block;
+    font-size: 16px;
+    margin: 10px auto;
+}
+
+.devinci-custom .social-sidebar.sidebar-full .user i[class^="icon-"] {
+    position: static;
+    margin-top: 0;
+    margin-right: 0;
+}
+
+.devinci-custom .brand {
+    color: #fff !important;
+    font-weight: 600;
+    margin-left: -20px;
+}
+
+.devinci-custom .navbar-inner .divider-vertical {
+    border-left-color: #6758a2 !important;
+    border-right-color: #6758a2 !important;
+    border-width: 1px;
+}
+
+.devinci-custom .page-title {
+    font-weight: 600;
+    text-align: center;
+    color: #6758a2;
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+.devinci-custom .breadcrumb {
+    border: none;
+    box-shadow: none;
+    text-align: center;
+    padding-top: 0;
+    margin-bottom: 20px;
+    background: none;
+}
+
+.devinci-custom .breadcrumb a
+
+{
+    color:rgb(126, 126, 126);
+}
+
+.devinci-custom .breadcrumb i {
+    display: none;
+}
+
+.devinci-custom a:hover,
+.devinci-custom a:focus {
+    color: #6758a2;
+    text-decoration: none;
+}
+
+a {
+    color: #000;
+    transition: 0.3s;
+}
+
+.devinci-custom .alert,
+.devinci-custom .alert-info {
+    background: #f3edfa !important;
+    border-color: #f3edfa !important;
+    color: #6758a2;
+    border-radius: 0.42rem;
+    box-shadow: 0 0 13px 0 #523f690d;
+    padding: 20px;
+}
+
+.devinci-custom .btn-default {
+    background-color: rgb(232, 232, 232);
+    color: #1c1c1b;
+    border: none;
+    text-shadow: none;
+    font-weight: 500;
+    background-image: none;
+}
+
+.devinci-custom .alert-info .pull-right {
+    float: none;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.devinci-custom .alert-info .pull-right .btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.devinci-custom .social-box {
+    border: none;
+    border-radius: 1.375rem;
+    box-shadow: 0 0 13px 0 #523f690d;
+}
+
+.devinci-custom .social-box.notes-main .social-box {
+    box-shadow: none;
+}
+
+.devinci-custom .social-box header {
+    border-radius: 1.375rem 1.375rem 0 0;
+    padding: 10px 20px;
+    background: #fff !important;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+
+}
+
+.devinci-custom .social-box .social-box header {
+    border-bottom: none;
+}
+
+.devinci-custom .social-box header h4 {
+    color: #1c1c1c;
+    font-weight: 500;
+}
+
+.devinci-custom .social-box .body {
+    padding: 10px 20px;
+}
+
+.notes-main > header > .tools {
+    float: none;
+}
+
+.notes-main > header > .tools .btn {
+    margin-bottom: 0;
+}
+
+.notes-main > header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.devinci-custom .social-box.notes-main .body {
+    padding: 0;
+}
+
+.notes > .dd > .dd-list > .dd-item > .dd-handle {
+    background: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.notes .dd-list.notes-ue {
+    padding: 10px 20px;
+}
+
+.notes .dd-unite-student {
+    background: none;
+    border: none;
+}
+
+.notes .dd-unite-student .dd-module > .dd-handle {
+    border: none;
+    background: #EEF0F8;
+    padding: 16px 20px;
+}
+
+.notes .dd-unite-student .dd-list {
+    padding-left: 0;
+}
+
+.notes .dd-unite-student .dd-list > li:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.notes .dd-unite-student .dd-module > .dd-handle .note_commentaire {
+    background: none;
+    text-align: left;
+    font-style: normal;
+}
+
+.notes .dd-unite-student .dd-module > .dd-handle .note_commentaire::before,
+.notes .dd-unite-student .dd-module > .dd-handle .note_commentaire::after {
+    content: '"';
+}
+
+.notes .dd-unite-student > .dd-handle {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 2px;
+}
+
+.notes .dd-unite-student > .dd-handle::before {
+    content: 'Unité : ';
+}
+
+.notes .dd-unite-student > .dd-handle i,
+.notes .dd-module > .dd-handle i
+{
+    display: none;
+}
+
+.notes *:hover {
+    color: #1c1c1b !important;
+}
+
+.notes .dd-module * {
+    float: none;
+}
+
+.devinci-custom #footer {
+    height: 20px;
+    background-color: #1C1C1C;
+    text-align: center;
+    color: #fff;
+}
+
+.notes .dd-module > .dd-handle {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.notes .dd-module > .dd-handle > * {
+    flex-basis: 50%;
+    flex-grow: 1;
+}
+
+.notes .dd-module > .dd-handle > *:last-child {
+    align-self: flex-start;
+}
+
+.notes .dd-module > .dd-handle > *:nth-child(even),
+.notes .dd-module > .dd-handle > *:last-child
+{
+    text-align: right;
+}
+
+.notes .badge {
+    margin-right: 0 !important;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 7px;
+    font-weight: 600;
+    background-color: #6758a2;
+}
+
+.notes .badge.badge-warning {
+    background-color: rgb(255, 172, 48);
+}
+
+.notes .badge.badge-important,
+.notes .label-important
+{
+    background-color: rgb(255, 28, 14);
+}
+
+.notes .label-important {
+    font-weight: 600;
+}
+
+.notes .label-inverse {
+    font-weight: 400;
+    padding: 7px 12px;
+    margin-left: 10px;
+}
+
+.notes .module-name {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.dd-module * {
+    pointer-events: none;
+}
+
+.dd-module *:not(:is(.badge, .label-inverse)) {
+    color: #1C1C1C;
+}
+
+.dd-module .label-success[href] {
+    background-color: #68cf29;
+    text-shadow: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    pointer-events: all;
+}
+
+.notes .dd-unite-student > .dd-handle .text-info,
+.notes .dd-unite-student > .dd-handle .label:not(:is(.label-important))
+{
+    pointer-events: none;
+    font-size: 12px;
+    color: #1c1c1c;
+    border: none;
+    font-weight: 400;
+    text-shadow: none;
+    padding-left: 0;
+}
+
+.notes .dd-unite-student > .dd-handle .label:not(:is(.label-important))::before {
+    content: "Moyenne obtenue : ";
+}
+
+
+.notes .dd-unite-student > .dd-handle * {
+    float: none;
+}
+
+.notes-main .btn-group > .btn
+{
+    border: none;
+    background-color: #1c1c1c;
+    color: #fff;
+    background-image: none;
+    text-shadow: none;
+}
+ 
+.notes-main .btn-group > .btn span {
+    border-top: 4px solid #fff;
+}
+
+.devinci-custom #calendar button {
+    border: none;
+    background-color: #6758a2;
+    background-image: none;
+    color: #fff;
+    text-shadow: none;
+}
+
+.devinci-custom #calendar .fc-minor > td {
+    border: none;
+}
+
+.devinci-custom #calendar .fc-today {
+    background-color: #9B92C2;
+}
+
+.devinci-custom #calendar .fc-event {
+   border: 3px solid #87A8E8;   
+   border-radius: 0;  
+   background-color: #EEF0F8 !important;
+
+}
+
+
+
+.devinci-custom #calendar .fc-event::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #87A8E8;
+    z-index: 0;
+} 
+
+.devinci-custom #calendar .fc-event.edt_cmo {
+    border-color: #FFCA77;
+}
+
+.devinci-custom #calendar .fc-event.edt_cmo::after {
+    background-color: #FFCA77;
+}
+
+.devinci-custom #calendar .fc-event.salles_formeret {
+    border-color: #68DF7B;
+}
+
+.devinci-custom #calendar .fc-event.salles_formeret::after {
+    background-color: #68DF7B;
+}
+
+
+
+.devinci-custom .fc-ltr .fc-time-grid .fc-event-container {
+    margin: 0 3px;
+
+}
+
+.devinci-custom #calendar .fc-event .fc-content {
+    height: 100%;
+    padding: 16px 20px;
+    box-sizing: border-box;
+}
+
+.devinci-custom #calendar .fc-event .fc-content .fc-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.devinci-custom .fc-title .fc-time {
+    order: -1;
+}
+
+.devinci-custom .fc-title .salle {
+    order: -2;
+}
+
+.devinci-custom .fc-title .prof {
+    order: 3;
+}
+
+.devinci-custom .fc-title .type_cours {
+    display: none;
+}
+
+.devinci-custom .fc-event .fc-title *,
+.devinci-custom .fc-event .fc-title 
+{
+    color: #1c1c1c;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.devinci-custom .fc-event .fc-title *:is(.salle) {
+    color: #fff; 
+    font-size: 13px;
+}
+
+.devinci-custom .fc-event .fc-title *:is(.fc-time span, .prof) {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.devinci-custom .fc-event .fc-title .salle {
+    background-color: rgb(111, 138, 191);
+    width: 94%;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(111, 138, 191, 0.29);
+    padding: 4px 12px;
+    box-sizing: border-box;
+}
+
+.devinci-custom .fc-event.edt_cmo .fc-title .salle {
+    background-color: rgb(255, 178, 59);
+    box-shadow: 0 2px 4px rgba(255, 178, 59, 0.3);
+}
+
+.devinci-custom .fc-event.salles_formeret .fc-title .salle {
+    background-color: rgb(96, 204, 113);
+    box-shadow: 0 2px 4px rgba(96, 204, 113, 0.37);
+}
