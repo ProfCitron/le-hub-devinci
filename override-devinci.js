@@ -2,6 +2,30 @@
 document.querySelector('body').classList.add('devinci-custom')
 console.log(1)
 
+// Change icons on sidebar menu
+var iconMenu = [
+    ["fas", "fa-home"],
+    ["fas", "fa-virus"],
+    ["fab", "fa-microsoft"],
+    ["fas", "fa-book"],
+    ["fas", "fa-brain"],
+    ["fas", "fa-bullhorn"],
+    ["fas", "fa-lightbulb"],
+    ["fas", "fa-database"],
+    ["fas", "fa-print"],
+    ["fas", "fa-chalkboard-teacher"],
+    ["fas", "fa-globe-americas"]
+]
+var loopMenuIcon = 0
+document.querySelectorAll(".social-sidebar .menu .accordion-toggle").forEach(function (item){
+    console.log("loop", loopMenuIcon)
+    console.log(iconMenu[loopMenuIcon])
+    let icon = document.createElement('i')
+    icon.classList.add(...iconMenu[loopMenuIcon])
+    item.insertAdjacentElement('afterbegin', icon)
+    loopMenuIcon++
+})
+
 // Move this shitting menu after the page title
 let url = window.location.href;
 if(url.includes('?')){
@@ -21,10 +45,22 @@ console.log(3)
 // Check if is mark page
 if(document.querySelector('.notes') != null) {
     console.log('oui notes')
+    document.querySelector('body').classList.add('custom-notes')
     // Add helpers classes to marks bloc
     document.querySelector('.notes').closest('.social-blue').classList.add('notes-main')
     document.querySelectorAll('.dd-unite-student').forEach(function(item){
         item.closest('.dd-list').classList.add('notes-ue')
+    })
+
+    // Remove duplicates 'IIM' word in choice year table
+    document.querySelectorAll('td:nth-of-type(2)').forEach(function (item){
+        let content = item.textContent.split(" ")
+        if(content[0] === content[1]) {
+            var output = content.slice(1)
+        } else {
+            var output = content
+        }
+        item.textContent = output.join(' ')
     })
 
     // Remove module ID
@@ -35,7 +71,8 @@ if(document.querySelector('.notes') != null) {
         moduleDiv.classList.add('module-name')
         moduleDiv.append(moduleName)
         item.childNodes[2].replaceWith(moduleDiv)
-    })  
+    })
+
 
     // Remove useless elements in module for better layout
     document.querySelectorAll('.dd-module > .dd-handle > br, .dd-module > .dd-handle > i, .dd-module > .dd-handle > .divider-vertical, .dd-module > .dd-handle > .text-error, .dd-module > .dd-handle > .clear:not(:is(.note_commentaire))').forEach(function(item){
@@ -77,3 +114,5 @@ if(document.querySelectorAll('.fc-time') != null){
     })
 }
 console.log(5)
+
+//document.querySelector('.social-orange').closest('.social-box.social-blue ').insertAdjacentElement('afterend', document.querySelector('.social-orange'))

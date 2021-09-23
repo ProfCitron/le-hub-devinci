@@ -1,14 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+/*@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");*/
 
 .devinci-custom {
     font-family: "Poppins", sans-serif;
 }
 
 .devinci-custom .social-sidebar {
-    background-color: #1c1c1c;
-    border-right: 4px solid #6758a2;
+    background-color: #6758a2;
+    border-right: none;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: none;
+}
+
+.devinci-custom .social-sidebar.sidebar-full {
+    width: 260px;
 }
 
 .devinci-custom .social-sidebar span {
@@ -33,7 +40,8 @@
 }
 
 .devinci-custom .social-sidebar .menu .accordion-group .accordion-heading .accordion-toggle {
-    padding: 12px 8px;
+    padding: 16px 20px;
+    font-size: 16px;
 }
 
 .devinci-custom .navigation-sidebar {
@@ -49,11 +57,6 @@
     font-size: 20px;
 }
 
-.devinci-custom .social-sidebar .user {
-    height: 40px;
-    box-sizing: border-box;
-}
-
 .devinci-custom {
     background-color: #EEF0F8;
 }
@@ -65,6 +68,10 @@
 .devinci-custom .social-sidebar .menu .accordion-group .accordion-heading .accordion-toggle:hover, 
 .devinci-custom .social-sidebar .menu .accordion-group .accordion-heading .accordion-toggle.opened {
     background-color: #6758a2;
+}
+
+.devinci-custom .social-sidebar .menu .accordion-group .accordion-heading .accordion-toggle span {
+    margin-left: 10px;
 }
 
 .devinci-custom .navbar-inner {
@@ -108,15 +115,53 @@
 }
 
 .devinci-custom .social-sidebar .user {
-    background-color: #1c1c1b;
+    height: 40px;
+    box-sizing: border-box;
+    background-color: #6758a2;
     color: #fff;
-    border-bottom: 1px solid #1c1c1b;
+    border-bottom: none;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
     height: auto;
     max-height: none;
+    border-radius: 20px;
+    box-shadow: none;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.devinci-custom .social-sidebar-content::after {
+    content: "ALV Online \A 2021 © Léonard de Vinci";
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    font-size: 11px;
+    text-align: center;
+    color: #ffffff;
+    z-index: 1;
+    white-space: pre;
+    font-weight: 300;
+}
+
+.devinci-custom .social-sidebar.sidebar-full .menu .accordion-group .accordion-heading a span {
+    font-weight: 300;
+}
+
+.devinci-custom .sidebar-full .social-navbar {
+    position: static;
+    margin: 20px 20px 0 300px;
+}
+.devinci-custom #main {
+    padding-bottom: 0;
+}
+
+.devinci-custom .sidebar-full #main {
+    margin-left: 300px;
+    margin-top: 20px;
+    margin-right: 20px;
 }
 
 .devinci-custom .social-sidebar.sidebar-full .user span {
@@ -188,10 +233,9 @@ a {
 .devinci-custom .alert,
 .devinci-custom .alert-info {
     background: #f3edfa !important;
-    border-color: #f3edfa !important;
     color: #6758a2;
+    border: 1px solid rgba(0,0,0,0.15) !important;
     border-radius: 0.42rem;
-    box-shadow: 0 0 13px 0 #523f690d;
     padding: 20px;
 }
 
@@ -218,9 +262,10 @@ a {
 }
 
 .devinci-custom .social-box {
-    border: none;
-    border-radius: 1.375rem;
-    box-shadow: 0 0 13px 0 #523f690d;
+    /*box-shadow: 0 0 13px 0 #523f690d;*/
+    border: 1px solid rgba(0,0,0,0.15) !important;
+    border-radius: 0.42rem;
+    box-shadow: none;
 }
 
 .devinci-custom .social-box.notes-main .social-box {
@@ -336,11 +381,14 @@ a {
     float: none;
 }
 
-.devinci-custom #footer {
-    height: 20px;
+.devinci-custom #footer.footer-sidebar-full {
+    display: none;
+    /*height: 20px;
     background-color: #1C1C1C;
     text-align: center;
     color: #fff;
+    margin-left: 300px;
+    margin-right: 20px;*/
 }
 
 .notes .dd-module > .dd-handle {
@@ -575,4 +623,35 @@ a {
 .devinci-custom .fc-event.salles_formeret .fc-title .salle {
     background-color: rgb(96, 204, 113);
     box-shadow: 0 2px 4px rgba(96, 204, 113, 0.37);
+}
+
+.devinci-custom table.table-bordered {
+    border: none;
+}
+
+.devinci-custom table td {
+    border: none;
+    vertical-align: middle;
+    padding: 8px;
+}
+
+.custom-notes table td:first-child,
+.custom-notes table td:nth-of-type(3)
+{
+    display: none;
+}
+
+.custom-notes table td .btn {
+    background: #6758A2;
+    color: #ffffff;
+    border-radius: 0.42rem;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 5px 12px;
+    font-size: 14px;
+}
+
+.custom-notes .social-box .social-box {
+    border: none !important;
 }
