@@ -34,7 +34,7 @@ if(url.includes('?')){
     var menu = document.querySelectorAll('#main > div.container-fluid .tools')[1];
 }
 let title = document.querySelector('.page-title').parentElement
-title.insertAdjacentElement('afterend', menu)
+title.insertAdjacentElement('beforebegin', menu)
 console.log(2)
 
 // Move burger navigation on topbar
@@ -46,6 +46,13 @@ console.log(3)
 if(document.querySelector('.notes') != null) {
     console.log('oui notes')
     document.querySelector('body').classList.add('custom-notes')
+
+    document.querySelectorAll('.dd-item.entry_elements').forEach(function (item) {
+        if(!item.classList.contains('dd-module')) {
+            item.classList.add('dd-module')
+        }
+    })
+
     // Add helpers classes to marks bloc
     document.querySelector('.notes').closest('.social-blue').classList.add('notes-main')
     document.querySelectorAll('.dd-unite-student').forEach(function(item){
@@ -83,6 +90,8 @@ if(document.querySelector('.notes') != null) {
     document.querySelectorAll('.notes .dd-unite-student > .dd-handle > i, .notes .dd-unite-student > .dd-handle > br, .notes .dd-unite-student > .dd-handle > .clear, .notes .dd-unite-student > .dd-handle > .divider-vertical').forEach(function(item){
         item.remove()
     })
+
+
 
 } else {
     console.log('nop notes')

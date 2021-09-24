@@ -46,7 +46,7 @@
 
 .devinci-custom .navigation-sidebar {
     float: left;
-    color: #fff;
+    color: #6758A2;
     padding: 10px 20px 10px 0;
 }
 .devinci-custom .navigation-sidebar:hover {
@@ -55,6 +55,10 @@
 
 .devinci-custom .navigation-sidebar i {
     font-size: 20px;
+}
+
+.devinci-custom .navigation-sidebar i.icon-align-justify::before {
+    content: "\f0c9";
 }
 
 .devinci-custom {
@@ -75,33 +79,81 @@
 }
 
 .devinci-custom .navbar-inner {
-    background-color: #1c1c1c !important;
-    border-width: 0;
-    box-shadow: rgba(82, 63, 105, 0.08) 0px 10px 30px 0px;
+    background-color: #ffffff !important;
+    /*box-shadow: rgba(82, 63, 105, 0.08) 0px 10px 30px 0px;*/
+    box-shadow: none !important;
+    border-radius: 0.42rem 0.42rem 0 0 !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.devinci-custom .navbar-inner .container-fluid {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    display: flex;
+    justify-content: space-between;
+}
+
+.devinci-custom .navbar-inner .container-fluid > * {
+    float: none;
+    width: calc(100% / 3);
+}
+
+.devinci-custom .navbar-inner .container-fluid > *:nth-of-type(2) {
+    text-align: center;
+}
+
+.devinci-custom .navbar-inner .container-fluid .nav.pull-right {
+    float: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.devinci-custom .navbar-inner .container-fluid .nav.pull-right > li {
+    float: none;
 }
 
 .devinci-custom .navbar-inner .brand, 
 .devinci-custom .navbar-inner .nav > li > a {
     text-shadow: none !important;
-    color: #fff !important;
+    color: #000000 !important;
+    font-weight: 500;
+}
+
+.devinci-custom .navbar-inner .nav li.dropdown > .dropdown-toggle [class^="icon-"],
+.devinci-custom .navbar-inner .nav li.dropdown > .dropdown-toggle [class*=" icon-"] {
+    text-shadow: none !important;
 }
 
 .devinci-custom .tools {
-    text-align: center;
+    background: #6758A2;
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-right: -20px;
+    text-align: left;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: rgba(0, 0, 0, 0.15) !important;
 }
 
 .devinci-custom .tools .btn {
     background-image: none;
     border: none;
     text-shadow: none;
-    background-color: #6758a2;
-    background-color: #1c1c1c;
     color: white;
-    padding: 0.55rem 0.75rem;
     font-size: 0.925rem;
     line-height: 1.35;
-    border-radius: 0.42rem;
-    margin-bottom: 20px;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 20px;
+    box-shadow: none;
+    transition: all 0.4s;
+}
+
+.devinci-custom .tools .btn:hover {
+    color: #6758A2;
+    background: #ffffff;
 }
 
 .devinci-custom .tools .btn i {
@@ -167,8 +219,6 @@
 .devinci-custom .social-sidebar.sidebar-full .user span {
     text-align: center;
     text-transform: capitalize;
-    display: block;
-    font-size: 14px;
     display: block;
     font-size: 16px;
     margin: 10px auto;
