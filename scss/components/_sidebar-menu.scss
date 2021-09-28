@@ -1,0 +1,104 @@
+// Official name of the navbar
+.social-sidebar {
+  background-color: #6758a2;
+  border-right: none;
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: none;
+
+  span {
+    font-weight: 500;
+  }
+
+  // Top section with user
+  .user {
+    box-sizing: border-box;
+    background-color: $color-primary;
+    color: $color-light;
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: auto;
+    max-height: none;
+    border-radius: 20px;
+    box-shadow: none;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    .avatar {
+      display: block;
+      object-fit: cover;
+      width: 80px;
+      height: 80px;
+      border-radius: 80px;
+      border: 3px solid $color-primary;
+    }
+
+    i {
+      display: none !important;
+    }
+
+    span {
+      text-align: center;
+      text-transform: capitalize;
+      display: block;
+      font-size: 16px;
+      margin: 10px auto;
+    }
+  }
+
+  // When sidebar is opened, sidebar-full custom class is added
+  &.sidebar-full {
+    width: $width-sidebar-menu;
+  }
+
+  // Access to menu items (not without difficulties...)
+  // Many classes because of CSS forces
+  // Accordion toggle is the <a> tag
+  .menu .accordion-group .accordion-heading .accordion-toggle {
+    color: $color-light;
+    padding: 16px 20px;
+    font-size: 16px;
+    background-color: $color-primary;
+    transition: $transition-default;
+
+    span {
+      margin-left: 10px;
+      font-weight: 300;
+    }
+
+    img {
+      display: none;
+    }
+
+    &:hover {
+      background-color: $color-light;
+      color: $color-primary;
+    }
+
+    &::after {
+      content: none;
+    }
+
+  }
+
+  // Add custom footer (initial footer is removed in _base.scss)
+  .social-sidebar-content {
+    &::after {
+      content: "ALV Online \A 2021 © Léonard de Vinci";
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      font-size: 11px;
+      text-align: center;
+      color: #ffffff;
+      z-index: 1;
+      white-space: pre;
+      font-weight: 300;
+    }
+  }
+
+}

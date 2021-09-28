@@ -3,7 +3,7 @@ document.querySelector('body').classList.add('devinci-custom')
 console.log(1)
 
 // Change icons on sidebar menu
-var iconMenu = [
+let iconMenu = [
     ["fas", "fa-home"],
     ["fas", "fa-virus"],
     ["fab", "fa-microsoft"],
@@ -11,22 +11,70 @@ var iconMenu = [
     ["fas", "fa-brain"],
     ["fas", "fa-bullhorn"],
     ["fas", "fa-lightbulb"],
+    ["fas", "fa-quidditch"],
     ["fas", "fa-database"],
     ["fas", "fa-print"],
     ["fas", "fa-chalkboard-teacher"],
     ["fas", "fa-globe-americas"]
 ]
-var loopMenuIcon = 0
+let loopMenuIcon = 0
 document.querySelectorAll(".social-sidebar .menu .accordion-toggle").forEach(function (item){
-    console.log("loop", loopMenuIcon)
-    console.log(iconMenu[loopMenuIcon])
     let icon = document.createElement('i')
     icon.classList.add(...iconMenu[loopMenuIcon])
     item.insertAdjacentElement('afterbegin', icon)
     loopMenuIcon++
 })
 
-// Move this shitting menu after the page title
+// Add class to main menu
+document.querySelector('.tools.small_margin').classList.add('main-menu')
+// Change icons and text on main menu
+let iconMainMenu = [
+    ["fas", "fa-home", "Accueil"],
+    ["fas", "fa-calendar", 'Emploi du temps'],
+    ["fas", "fa-user-times", 'Mes absences'],
+    ["fas", "fa-file-signature", 'Attestations (alternance)'],
+    ["fas", "fa-thumbs-up", "Mes notes"],
+    ["fas", "fa-chalkboard-teacher", "Mes cours"],
+    ["fas", "fa-folder", "Documents"],
+    ["fab", "fa-black-tie", "Stages"],
+    ["fas", "fa-globe-americas", "International"],
+    ["fas", "fa-clipboard-check", "Rendus"],
+    ["fas", "fa-euro-sign", "Finances"],
+    ["fas", "fa-bullhorn", "Mes actions de promo."],
+    ["fas", "fa-exclamation", "Relevé de présence"]
+]
+let loopMainMenuIcon = 0
+document.querySelectorAll('.main-menu > a').forEach(function (item){
+    let iconMenu = item.querySelector('i')
+    iconMenu.className = "";
+    iconMenu.classList.add(iconMainMenu[loopMainMenuIcon][0])
+    iconMenu.classList.add(iconMainMenu[loopMainMenuIcon][1])
+    console.log(item.childNodes[2])
+    console.log(iconMainMenu[loopMainMenuIcon][2])
+    item.childNodes[2].textContent = iconMainMenu[loopMainMenuIcon][2]
+    loopMainMenuIcon++
+    //
+
+})
+// Add dropdown menu to main menu
+document.querySelector('.main-menu').insertAdjacentHTML('beforeend', "<div class=\"btn-group\">\n" +
+    "  <a class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">\n" +
+    "    <i class=\"fas fa-info\"></i> Voir plus \n" +
+    "    <span class=\"caret\"></span>\n" +
+    "  </a>\n" +
+    "  <ul class=\"dropdown-menu\">\n" +
+    "    <!-- dropdown menu links -->\n" +
+    "  </ul>\n" +
+    "</div>")
+
+// Place most unpopular items inside this dropdown
+document.querySelectorAll(".main-menu > a:nth-of-type(4),.main-menu > a:nth-of-type(8), .main-menu > a:nth-of-type(9), .main-menu > a:nth-of-type(10), .main-menu > a:nth-of-type(11), .main-menu > a:nth-of-type(12)").forEach(function (item){
+    let listItem = document.createElement('li')
+    listItem.insertAdjacentElement('afterbegin', item)
+    document.querySelector('.main-menu ul.dropdown-menu').insertAdjacentElement('afterbegin', listItem)
+})
+
+// Move main menu after the page title
 let url = window.location.href;
 if(url.includes('?')){
     var menu = document.querySelectorAll('#main > div.container-fluid .tools')[0];

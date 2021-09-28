@@ -1,0 +1,54 @@
+/*
+IMPORTANT INSTRUCTIONS
+
+1. Inverted media queries
+
+Student intranet was build in 2010's.
+This isn't a mobile-first website. That's why we decided to use max-width media query based instead of min-width
+
+
+2. Breakpoints choices
+
+Student intranet works with boostrap 2, we'll use the same breakpoints.
+As it's an old version of bootstrap, I decided to add a custom breakpoint mixin for nowadays usages
+
+*/
+
+/// Nested custom media query
+/// @author Prof Citron
+/// @param {Length} $width
+@mixin custom-breakpoint($width) {
+  @media screen and (max-width: $width) {
+    @if not $width {
+      @error "Width not specified on custom-breakpoint call"
+    }
+    @content
+  }
+}
+
+/// Nested custom media queries based on bootstrap 2
+/// Use it from the biggest one to the smallest one
+/// @author Prof Citron
+@mixin lg {
+  @media screen and (max-width: 1200px) {
+    @content
+  }
+}
+
+@mixin md {
+  @media screen and (max-width: 979px) {
+    @content
+  }
+}
+
+@mixin sm {
+  @media screen and (max-width: 767px) {
+    @content
+  }
+}
+
+@mixin xs {
+  @media screen and (max-width: 480px) {
+    @content
+  }
+}

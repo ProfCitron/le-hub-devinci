@@ -14,7 +14,7 @@
       {
         "matches": ["*://*.leonard-de-vinci.net/*"],
         "js": ["override-devinci.js", "node_modules/@fortawesome/fontawesome-free/js/all.js"],
-        "css": ["override-devinci.css", "node_modules/@fortawesome/fontawesome-free/css/all.css"]
+        "css": ["main.css", "override-devinci.css", "node_modules/@fortawesome/fontawesome-free/css/all.css"]
       }
     ]
   
