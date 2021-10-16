@@ -16,6 +16,9 @@
         "js": ["build/all.js"],
         "css": ["build/all.css"]
       }
-    ]
+    ],
+    "browser_action": {
+      "default_popup": "html/popup.html"
+    }
   
   }
