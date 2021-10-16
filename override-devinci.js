@@ -25,8 +25,14 @@ document.querySelectorAll(".social-sidebar .menu .accordion-toggle").forEach(fun
     loopMenuIcon++
 })
 
+// Remove photo section
+if(document.getElementById('div_photo_upl') != null) {
+    document.getElementById('div_photo_upl').remove()
+}
+
 // Add class to main menu
-document.querySelector('.tools.small_margin').classList.add('main-menu')
+console.log(document.querySelectorAll('.tools'))
+document.querySelectorAll('.tools')[0].classList.add('main-menu')
 // Change icons and text on main menu
 let iconMainMenu = [
     ["fas", "fa-home", "Accueil"],
@@ -69,18 +75,29 @@ document.querySelector('.main-menu').insertAdjacentHTML('beforeend', "<div class
 
 // Place most unpopular items inside this dropdown
 document.querySelectorAll(".main-menu > a:nth-of-type(4),.main-menu > a:nth-of-type(8), .main-menu > a:nth-of-type(9), .main-menu > a:nth-of-type(10), .main-menu > a:nth-of-type(11), .main-menu > a:nth-of-type(12)").forEach(function (item){
-    let listItem = document.createElement('li')
-    listItem.insertAdjacentElement('afterbegin', item)
-    document.querySelector('.main-menu ul.dropdown-menu').insertAdjacentElement('afterbegin', listItem)
+    let listItem = document.createElement('li') // <li> </li>
+    listItem.insertAdjacentElement('afterbegin', item) // <li> a href stage </li>
+    document.querySelector('.main-menu ul.dropdown-menu').insertAdjacentElement('beforeend', listItem)
 })
 
+// Url testing
+let url = window.location.href;
+if(url === "https://www.leonard-de-vinci.net/") {
+    document.querySelector(".social-box .body > .row-fluid:nth-of-type(2) > .span6 > .row-fluid").remove()
+}
+
+
 // Move main menu after the page title
+/*
 let url = window.location.href;
 if(url.includes('?')){
-    var menu = document.querySelectorAll('#main > div.container-fluid .tools')[0];
+
 }else{
-    var menu = document.querySelectorAll('#main > div.container-fluid .tools')[1];
+
 }
+*/
+
+let menu = document.querySelectorAll('#main > div.container-fluid .tools')[0];
 let title = document.querySelector('.page-title').parentElement
 title.insertAdjacentElement('beforebegin', menu)
 console.log(2)
@@ -170,6 +187,6 @@ if(document.querySelectorAll('.fc-time') != null){
         })
     })
 }
-console.log(5)
+console.log(7)
 
 //document.querySelector('.social-orange').closest('.social-box.social-blue ').insertAdjacentElement('afterend', document.querySelector('.social-orange'))
