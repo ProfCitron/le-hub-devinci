@@ -11,13 +11,13 @@ gulp.task('sass', function (){
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('all.css'))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./build/'));
+        .pipe(gulp.dest('./hub-devinci/build/'));
 })
 
 gulp.task('scripts', function() {
     return gulp.src(['./node_modules/@fortawesome/fontawesome-free/js/all.js', './override-devinci.js'])
         .pipe(concat('all.js'))
-        .pipe(gulp.dest('./build/'));
+        .pipe(gulp.dest('./hub-devinci/build/'));
 });
 
 //exports.watch = function () {

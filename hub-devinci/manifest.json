@@ -1,10 +1,9 @@
 {
-
     "manifest_version": 2,
-    "name": "Devinci Override",
+    "name": "Le hub Devinci",
     "version": "1.0",
   
-    "description": "Vivre mieux avec son portail !",
+    "description": "Le hub Devinci vous propose régulièrement un restylage du portail en fonction de ses évolutions",
   
     "icons": {
       "48": "Logo_De_Vinci_fd_noir.png"
@@ -20,5 +19,4 @@
     "browser_action": {
       "default_popup": "html/popup.html"
     }
-  
   }
