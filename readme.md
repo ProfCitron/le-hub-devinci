@@ -5,5 +5,7 @@ Bienvenue sur l'extension **non officielle** "Le hub Devinci". Nous vous proposo
 
 ## Installation
 
+[Vous pouvez télécharger l'extension ici](https://github.com/ProfCitron/le-hub-devinci/releases)
+
 ### Chrome
 Sur chrome, aller dans le menu `plus d'outils -> Extensions`. En haut à droite, activer le mode développeur, puis en haut à gauche cliquer sur `Charger l'extension non empaquetée` et slectionner le dossier **hub-devinci** dans le dossier téléchargé. 
