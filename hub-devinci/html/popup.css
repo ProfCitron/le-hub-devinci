@@ -81,6 +81,14 @@
     padding: 16px;
 }
 
+.popup--body > div {
+    display: none;
+}
+
+.popup--body > div.active {
+    display: block;
+}
+
 .info--images {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -106,4 +114,27 @@
 
 .info--images .disabled {
     cursor: not-allowed;
+}
+
+.changelog--bloc {
+    margin-bottom: 24px;
+}
+
+.changelog--bloc h2 {
+    color: var(--color-primary);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.changelog--bloc ul {
+    margin-left: 24px;
+}
+
+.changelog--bloc li {
+    font-size: 12px;
+}
+
+.contribute p {
+    margin-bottom: 16px;
 }
