@@ -1,0 +1,265 @@
+// Injected with JS - On body tag
+&.custom-notes {
+
+  // Content box
+  .notes-main {
+
+    header {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .body {
+      padding: 0;
+
+      // Get year or semesters PDF resumes
+      .btn-group > .btn
+      {
+        border: none;
+        background-color: #1c1c1c;
+        color: $color-light;
+        background-image: none;
+        text-shadow: none;
+
+        span {
+          border-top: 4px solid $color-light;
+        }
+      }
+
+      // child of content-box body
+      .notes {
+
+        *:hover {
+          color: #1c1c1b !important;
+        }
+
+        // Part 1 : for basics CSS
+        // .dd-list : <ol> for all semesters
+        // .dd-item : <li> for one semester
+        .dd > .dd-list > .dd-item {
+
+          // Semester title section
+          > .dd-handle {
+            background: none;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            border: none;
+          }
+
+          // <ol> for "unité d'enseignement"
+          .dd-list.notes-ue {
+            padding: 10px 20px;
+
+            // Only <li> item of parent list declaration, why ?
+            .dd-unite-student {
+              background: none;
+              border: none;
+
+              // "Unité d'enseignement" name
+              > .dd-handle{
+                background: none;
+                border: none;
+                font-size: 18px;
+                font-weight: 600;
+                padding-left: 2px;
+                &::before {
+                  content: 'Unité : ';
+                }
+                i {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+
+
+        // Part 2 : Students marks
+        .dd-unite-student {
+
+          // <ol> for marks list
+          .dd-list {
+            padding-left: 0;
+
+            // <li> for each mark
+            .dd-module {
+
+
+              * {
+                float: none;
+                pointer-events: none;
+
+                &:not(:is(.badge, .label-inverse)) {
+                  color: #1C1C1C;
+                }
+              }
+
+              &:not(:last-child) {
+                margin-bottom: 12px;
+              }
+
+              // Course mark content
+              .dd-handle {
+                border: none;
+                background: #EEF0F8;
+                padding: 16px 20px;
+                display: flex;
+                flex-wrap: wrap;
+
+                i {
+                  display: none;
+                }
+
+                // Special texts under unite name (pass mark of unité d'enseignement)
+                .label {
+
+                  &:not(:is(.label-important)){
+                    pointer-events: none;
+                    font-size: 12px;
+                    color: #1c1c1c;
+                    border: none;
+                    font-weight: 400;
+                    text-shadow: none;
+                    padding-left: 0;
+                    &::before {
+                      content: "Moyenne obtenue : ";
+                    }
+                  }
+
+                  &-important {
+                    font-weight: 600;
+                    background-color: $color-important;
+                  }
+
+                  &-inverse {
+                    font-weight: 400;
+                    padding: 7px 12px;
+                    margin-left: 10px;
+                  }
+
+                  &-success[href] {
+                    background-color: #68cf29;
+                    text-shadow: none;
+                    padding: 8px 16px;
+                    border-radius: 20px;
+                    font-size: 12px;
+                    font-weight: 600;
+                    pointer-events: all;
+                  }
+
+
+                }
+
+                .text-info {
+                  pointer-events: none;
+                  font-size: 12px;
+                  color: #1c1c1c;
+                  border: none;
+                  font-weight: 400;
+                  text-shadow: none;
+                  padding-left: 0;
+                }
+
+                // All items of a mark (mark, name, comments, global stats)
+                > * {
+                  float: none;
+                  flex-basis: 50%;
+                  flex-grow: 1;
+
+                  &:last-child {
+                    align-self: flex-start;
+                    text-align: right;
+                  }
+
+                  &:nth-child(even) {
+                    text-align: right;
+                  }
+                }
+
+                .module-name {
+                  font-size: 16px;
+                  margin-bottom: 0;
+                }
+
+                .note_commentaire {
+                  background: none;
+                  text-align: left;
+                  font-style: normal;
+
+                  &::before,
+                  &::after {
+                    content: '"';
+                  }
+
+                }
+
+                .badge {
+                  margin-right: 0 !important;
+                  padding: 8px 16px;
+                  border-radius: 20px;
+                  font-size: 12px;
+                  margin-bottom: 7px;
+                  font-weight: 600;
+                  background-color: $color-primary;
+
+                  &.badge-warning {
+                    @extend .badge;
+                    background-color: $color-warning;
+                  }
+
+                  &.badge-important {
+                    @extend .badge;
+                    background-color: $color-important;
+                  }
+
+                }
+
+              }
+            }
+          }
+        }
+
+
+
+      }
+
+
+    }
+
+
+
+  }
+
+
+  // Notes is made of content box inside others
+  // UI design fix
+  .social-box .social-box {
+    border: none !important;
+  }
+
+  // Array with years choices
+  table td {
+
+    // UX fix : Useless infos for students
+    &:first-child,
+    &:nth-of-type(3) {
+      display: none;
+    }
+
+    .btn {
+      background: $color-primary;
+      color: $color-light;
+      border-radius: 0.42rem;
+      border: none;
+      box-shadow: none;
+      text-shadow: none;
+      padding: 5px 12px;
+      font-size: 14px;
+    }
+  }
+
+}

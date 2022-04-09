@@ -1,0 +1,86 @@
+// Official name of the little top menu
+.navbar-blue.social-navbar {
+  position: static;
+  margin: 20px 20px 0 $margin-main;
+
+  // 1/2 child
+  .navbar-inner {
+    background-color: $color-light !important;
+    box-shadow: none !important;
+    border-radius: 0.42rem 0.42rem 0 0 !important;
+    border: 1px solid $shadow-default !important;
+
+    // 2/2 child
+    // Real content inside
+    .container-fluid {
+      padding-top: 6px !important;
+      padding-bottom: 6px !important;
+      display: flex;
+      justify-content: space-between;
+
+      > * {
+        float: none;
+        width: calc(100% / 3);
+
+        // Center title
+        &:nth-of-type(2) {
+          text-align: center;
+        }
+      }
+
+
+      // Left content - Burger menu for sidebar menu
+      // ! Added with JS
+      .navigation-sidebar {
+        color: $color-primary;
+        padding: 10px 20px 10px 0;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        i {
+          font-size: 20px;
+
+          // Change icon with modern font-awesome
+          &.icon-align-justify::before {
+            content: "\f0c9";
+          }
+
+        }
+
+      }
+
+      // Center content
+      .brand {
+        text-shadow: none !important;
+        color: $color-dark !important;
+        font-weight: 500;
+      }
+
+      // Right content
+      // Seems important but users have never clicked on it ^^
+      .nav.pull-right {
+        float: none;
+        display: flex;
+        justify-content: flex-end;
+
+        > li {
+          float: none;
+
+          &.divider-vertical {
+            border-left-color: $color-primary !important;
+            border-right-color: $color-primary !important;
+            border-width: 1px;
+          }
+
+          > a {
+            text-shadow: none !important;
+            color: $color-dark !important;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+// ! main-menu class is injected by JS
+// Officiel class on website is .tools (but several usuges...)
+.main-menu {
+  background: #6758A2;
+  margin-top: -20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  text-align: left;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+
+  // Menu items
+  .btn {
+    background-image: none;
+    border: none;
+    text-shadow: none;
+    color: white;
+    font-size: 0.925rem;
+    line-height: 1.35;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 20px;
+    box-shadow: none;
+    transition: $transition-default;
+
+    &:hover {
+      color: $color-primary !important;
+      background: $color-light !important;
+
+      .caret {
+        border-top: 4px solid $color-primary;
+      }
+    }
+
+    i, svg {
+      margin-right: 8px;
+    }
+
+    .caret {
+      border-top: 4px solid $color-light;
+      margin-left: 3px;
+    }
+
+
+
+  }
+  .dropdown-menu {
+    background-color: $color-primary;
+
+    a {
+      color: $color-light;
+      text-align: left;
+    }
+  }
+}

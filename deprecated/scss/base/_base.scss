@@ -1,0 +1,22 @@
+a {
+  color: $color-dark;
+  transition: 0.3s;
+  &:hover, &:focus {
+    color: $color-primary;
+    text-decoration: none;
+  }
+}
+
+table {
+
+  &.table-bordered {
+    border: none;
+  }
+
+  td {
+    border: none;
+    vertical-align: middle;
+    padding: 8px;
+  }
+
+}

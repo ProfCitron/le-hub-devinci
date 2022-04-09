@@ -1,0 +1,43 @@
+// Content section
+#main {
+  padding-bottom: 0;
+  margin-left: $margin-main;
+  margin-top: 20px;
+  margin-right: 20px;
+
+  .sidebar-full & {
+    margin-left: $margin-main;
+  }
+
+  // IIM logo next to page title
+  .schoole_pastil {
+    background: none;
+    border: none;
+    display: none;
+  }
+
+  .page-title {
+    font-weight: 600;
+    text-align: center;
+    color: #6758a2;
+    font-size: 28px;
+    margin-top: 20px;
+  }
+
+  .breadcrumb {
+    border: none;
+    box-shadow: none;
+    text-align: center;
+    padding-top: 0;
+    margin-bottom: 20px;
+    background: none;
+
+    a {
+      color:rgb(126, 126, 126);
+
+      i {
+        display: none;
+      }
+    }
+  }
+}

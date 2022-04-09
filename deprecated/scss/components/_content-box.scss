@@ -1,0 +1,45 @@
+// This is all the boxes with the content on the intranet
+// Official name .social-box
+
+.social-box {
+  border: 1px solid rgba(0,0,0,0.15) !important;
+  border-radius: 0.42rem;
+  box-shadow: none;
+
+  // Title part
+  header {
+    border-radius: 1.375rem 1.375rem 0 0;
+    padding: 10px 20px;
+    background: #fff !important;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+
+    h4 {
+      color: #1c1c1c;
+      font-weight: 500;
+    }
+
+    // If buttons inside title part
+    .tools {
+      float: none;
+
+      .btn {
+        margin-bottom: 0;
+      }
+    }
+
+  }
+
+  // Content part
+  .body {
+    padding: 10px 20px;
+  }
+
+  // if social-box inbricated
+  .social-box {
+    box-shadow: none;
+    header {
+      border-bottom: none;
+    }
+  }
+
+}

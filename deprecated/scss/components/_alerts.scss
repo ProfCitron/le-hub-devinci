@@ -1,0 +1,25 @@
+.alert {
+  background: #f3edfa !important;
+  color: #6758a2;
+  border: 1px solid rgba(0,0,0,0.15) !important;
+  border-radius: 0.42rem;
+  padding: 20px;
+
+  &-info {
+    @extends .alert;
+
+    .pull-right {
+      float: none;
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+
+      // Used in covid alert-info
+      .btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+}

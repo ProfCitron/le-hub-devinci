@@ -1,0 +1,29 @@
+{
+  "name": "devinci-override",
+  "version": "1.0.0",
+  "description": "A JS and CSS improvement for Devinci students Dashboard",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProfCitron/devinci-override.git"
+  },
+  "author": "Alexis Bougy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ProfCitron/devinci-override/issues"
+  },
+  "homepage": "https://github.com/ProfCitron/devinci-override#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.42.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "gulp-sourcemaps": "^3.0.0"
+  }
+}
