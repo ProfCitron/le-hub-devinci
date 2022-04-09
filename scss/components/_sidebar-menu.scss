@@ -1,10 +1,9 @@
 // Official name of the navbar
 .social-sidebar {
-  background-color: #6758a2;
+  background-color: var(--color-white);
   border-right: none;
-  margin: 20px;
   border-radius: 20px;
-  box-shadow: none;
+  box-shadow: 1px 0px 20px rgb(44 44 44 / 8%);
 
   span {
     font-weight: 500;
@@ -13,9 +12,9 @@
   // Top section with user
   .user {
     box-sizing: border-box;
-    background-color: $color-primary;
-    color: $color-light;
-    border-bottom: none;
+    background-color: var(--color-white);
+    color: var(--color-devinci);
+    border-bottom: none !important;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -23,7 +22,7 @@
     height: auto;
     max-height: none;
     border-radius: 20px;
-    box-shadow: none;
+    box-shadow: none !important;
     padding-top: 25px;
     padding-bottom: 25px;
 
@@ -33,7 +32,7 @@
       width: 80px;
       height: 80px;
       border-radius: 80px;
-      border: 3px solid $color-primary;
+      border: 3px solid var(--color-iim);
     }
 
     i {
@@ -46,6 +45,7 @@
       display: block;
       font-size: 16px;
       margin: 10px auto;
+      color: var(--color-devinci);
     }
   }
 
@@ -58,15 +58,16 @@
   // Many classes because of CSS forces
   // Accordion toggle is the <a> tag
   .menu .accordion-group .accordion-heading .accordion-toggle {
-    color: $color-light;
+    color: var(--color-devinci);
     padding: 16px 20px;
-    font-size: 16px;
-    background-color: $color-primary;
+    font-size: 15px;
+    background-color: var(--color-white);
     transition: $transition-default;
 
     span {
       margin-left: 10px;
       font-weight: 300;
+      color: var(--color-devinci);
     }
 
     img {
@@ -74,8 +75,8 @@
     }
 
     &:hover {
-      background-color: $color-light;
-      color: $color-primary;
+      background-color: var(--color-iim);
+      color: var(--color-white);
     }
 
     &::after {
@@ -86,6 +87,10 @@
 
   // Add custom footer (initial footer is removed in _base.scss)
   .social-sidebar-content {
+    background-color: var(--color-white) !important;
+    border-right: none !important;
+    box-shadow: 1px 0px 20px rgb(44 44 44 / 8%);
+
     &::after {
       content: "ALV Online \A 2021 © Léonard de Vinci";
       position: absolute;
@@ -94,11 +99,15 @@
       right: 20px;
       font-size: 11px;
       text-align: center;
-      color: #ffffff;
+      color: var(--color-devinci);
       z-index: 1;
       white-space: pre;
       font-weight: 300;
     }
+  }
+
+  .menu-mobile-info {
+    display: none;
   }
 
 }

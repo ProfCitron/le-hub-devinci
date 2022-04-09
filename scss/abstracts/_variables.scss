@@ -6,7 +6,7 @@ $color-important: rgb(255, 28, 14);
 $color-success: #68cf29;
 
 $width-sidebar-menu: 260px;
-$margin-main: $width-sidebar-menu+40px;
+$margin-main: $width-sidebar-menu;
 
 $transition-default: all 0.3s;
 
@@ -14,3 +14,10 @@ $font-main: "Poppins", sans-serif;
 $font-secondary: "Roboto", sans-serif;
 
 $shadow-default: rgba(0, 0, 0, 0.15);
+
+:root {
+    --color-primary: #6758a2;
+    --color-devinci: #1c1c1b;
+    --color-iim: #ef7d00;
+    --color-white: #ffffff;
+}

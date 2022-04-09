@@ -1,39 +1,54 @@
 // Official name of the little top menu
 .navbar-blue.social-navbar {
-  position: static;
-  margin: 20px 20px 0 $margin-main;
+  position: relative;
+  margin: 0;
+  left: 260px;
+  width: calc(100% - 260px);
 
   // 1/2 child
   .navbar-inner {
-    background-color: $color-light !important;
-    box-shadow: none !important;
-    border-radius: 0.42rem 0.42rem 0 0 !important;
-    border: 1px solid $shadow-default !important;
+    position: relative;
+    background-color: var(--color-iim) !important;
+    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 15%) !important;
+    border-radius: 0 !important;
+    border: none !important;
 
     // 2/2 child
     // Real content inside
     .container-fluid {
-      padding-top: 6px !important;
-      padding-bottom: 6px !important;
-      display: flex;
-      justify-content: space-between;
+      padding: 12px !important;
 
-      > * {
-        float: none;
-        width: calc(100% / 3);
 
-        // Center title
-        &:nth-of-type(2) {
-          text-align: center;
+      // Right content - DL apps
+      // ! Added with JS
+      .download-app {
+        float: right;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        
+
+        p {
+          margin-bottom: 0;
+          color: var(--color-white);
+        }
+
+        a {
+          background-color: var(--color-white);
+          color: var(--color-iim);
+          width: 36px;
+          height: 36px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
-
 
       // Left content - Burger menu for sidebar menu
       // ! Added with JS
       .navigation-sidebar {
-        color: $color-primary;
-        padding: 10px 20px 10px 0;
+        color: var(--color-white);
+        padding: 0 0 0 20px;
 
         &:hover {
           cursor: pointer;
@@ -49,6 +64,18 @@
 
         }
 
+      }
+
+      .navbar-inner-pres {
+        display: flex;
+        align-items: center;
+        .schoole_pastil {
+          display: none;
+        }
+
+        .navbar-inner-title {
+          padding: 8px 20px;
+        }
       }
 
       // Center content
@@ -84,3 +111,4 @@
     }
   }
 }
+

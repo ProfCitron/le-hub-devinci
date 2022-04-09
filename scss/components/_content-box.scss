@@ -2,7 +2,8 @@
 // Official name .social-box
 
 .social-box {
-  border: 1px solid rgba(0,0,0,0.15) !important;
+  //border: 1px solid rgba(0,0,0,0.15) !important;
+  border: none !important;
   border-radius: 0.42rem;
   box-shadow: none;
 
@@ -37,6 +38,7 @@
   // if social-box inbricated
   .social-box {
     box-shadow: none;
+    border: 1px solid rgba(170, 170, 170, 0.15) !important;
     header {
       border-bottom: none;
     }

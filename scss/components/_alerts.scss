@@ -1,8 +1,9 @@
 .alert {
-  background: #f3edfa !important;
-  color: #6758a2;
-  border: 1px solid rgba(0,0,0,0.15) !important;
-  border-radius: 0.42rem;
+  background: var(--color-white) !important;
+  color: var(--color-devinci);
+  border: none !important;
+  //border: 1px solid rgba(0,0,0,0.15) !important;
+  border-radius: 0.32rem;
   padding: 20px;
 
   &-info {

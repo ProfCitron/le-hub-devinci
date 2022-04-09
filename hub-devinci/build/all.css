@@ -6125,6 +6125,13 @@ readers do not read off random characters that represent icons */
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+:root {
+  --color-primary: #6758a2;
+  --color-devinci: #1c1c1b;
+  --color-iim: #ef7d00;
+  --color-white: #ffffff;
+}
+
 /*
 IMPORTANT INSTRUCTIONS
 
@@ -6161,31 +6168,43 @@ body.devinci-custom table td {
   padding: 8px;
 }
 body.devinci-custom .navbar-blue.social-navbar {
-  position: static;
-  margin: 20px 20px 0 300px;
+  position: relative;
+  margin: 0;
+  left: 260px;
+  width: calc(100% - 260px);
 }
 body.devinci-custom .navbar-blue.social-navbar .navbar-inner {
-  background-color: #ffffff !important;
-  box-shadow: none !important;
-  border-radius: 0.42rem 0.42rem 0 0 !important;
-  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  position: relative;
+  background-color: var(--color-iim) !important;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15) !important;
+  border-radius: 0 !important;
+  border: none !important;
 }
 body.devinci-custom .navbar-blue.social-navbar .navbar-inner .container-fluid {
-  padding-top: 6px !important;
-  padding-bottom: 6px !important;
+  padding: 12px !important;
+}
+body.devinci-custom .navbar-blue.social-navbar .navbar-inner .container-fluid .download-app {
+  float: right;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
-body.devinci-custom .navbar-blue.social-navbar .navbar-inner .container-fluid > * {
-  float: none;
-  width: 33.3333333333%;
+body.devinci-custom .navbar-blue.social-navbar .navbar-inner .container-fluid .download-app p {
+  margin-bottom: 0;
+  color: var(--color-white);
 }
-body.devinci-custom .navbar-blue.social-navbar .navbar-inner .container-fluid > *:nth-of-type(2) {
-  text-align: center;
+body.devinci-custom .navbar-blue.social-navbar .navbar-inner .container-fluid .download-app a {
+  background-color: var(--color-white);
+  color: var(--color-iim);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 body.devinci-custom .navbar-blue.social-navbar .navbar-inner .container-fluid .navigation-sidebar {
-  color: #6758a2;
-  padding: 10px 20px 10px 0;
+  color: var(--color-white);
+  padding: 0 0 0 20px;
 }
 body.devinci-custom .navbar-blue.social-navbar .navbar-inner .container-fluid .navigation-sidebar:hover {
   cursor: pointer;
@@ -6195,6 +6214,16 @@ body.devinci-custom .navbar-blue.social-navbar .navbar-inner .container-fluid .n
 }
 body.devinci-custom .navbar-blue.social-navbar .navbar-inner .container-fluid .navigation-sidebar i.icon-align-justify::before {
   content: "\f0c9";
+}
+body.devinci-custom .navbar-blue.social-navbar .navbar-inner .container-fluid .navbar-inner-pres {
+  display: flex;
+  align-items: center;
+}
+body.devinci-custom .navbar-blue.social-navbar .navbar-inner .container-fluid .navbar-inner-pres .schoole_pastil {
+  display: none;
+}
+body.devinci-custom .navbar-blue.social-navbar .navbar-inner .container-fluid .navbar-inner-pres .navbar-inner-title {
+  padding: 8px 20px;
 }
 body.devinci-custom .navbar-blue.social-navbar .navbar-inner .container-fluid .brand {
   text-shadow: none !important;
@@ -6224,12 +6253,12 @@ body.devinci-custom #footer.footer-sidebar-full {
 }
 body.devinci-custom #main {
   padding-bottom: 0;
-  margin-left: 300px;
+  margin-left: 280px;
   margin-top: 20px;
   margin-right: 20px;
 }
 .sidebar-full body.devinci-custom #main {
-  margin-left: 300px;
+  margin-left: 260px;
 }
 body.devinci-custom #main .schoole_pastil {
   background: none;
@@ -6246,32 +6275,34 @@ body.devinci-custom #main .page-title {
 body.devinci-custom #main .breadcrumb {
   border: none;
   box-shadow: none;
-  text-align: center;
+  text-align: left;
   padding-top: 0;
   margin-bottom: 20px;
   background: none;
+  margin-top: 10px;
+}
+body.devinci-custom #main .breadcrumb i {
+  display: none;
 }
 body.devinci-custom #main .breadcrumb a {
   color: #7e7e7e;
-}
-body.devinci-custom #main .breadcrumb a i {
-  display: none;
+  font-size: 24px;
+  font-weight: 400;
 }
 body.devinci-custom .social-sidebar {
-  background-color: #6758a2;
+  background-color: var(--color-white);
   border-right: none;
-  margin: 20px;
   border-radius: 20px;
-  box-shadow: none;
+  box-shadow: 1px 0px 20px rgba(44, 44, 44, 0.08);
 }
 body.devinci-custom .social-sidebar span {
   font-weight: 500;
 }
 body.devinci-custom .social-sidebar .user {
   box-sizing: border-box;
-  background-color: #6758a2;
-  color: #ffffff;
-  border-bottom: none;
+  background-color: var(--color-white);
+  color: var(--color-devinci);
+  border-bottom: none !important;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -6279,7 +6310,7 @@ body.devinci-custom .social-sidebar .user {
   height: auto;
   max-height: none;
   border-radius: 20px;
-  box-shadow: none;
+  box-shadow: none !important;
   padding-top: 25px;
   padding-bottom: 25px;
 }
@@ -6289,7 +6320,7 @@ body.devinci-custom .social-sidebar .user .avatar {
   width: 80px;
   height: 80px;
   border-radius: 80px;
-  border: 3px solid #6758a2;
+  border: 3px solid var(--color-iim);
 }
 body.devinci-custom .social-sidebar .user i {
   display: none !important;
@@ -6300,30 +6331,37 @@ body.devinci-custom .social-sidebar .user span {
   display: block;
   font-size: 16px;
   margin: 10px auto;
+  color: var(--color-devinci);
 }
 body.devinci-custom .social-sidebar.sidebar-full {
   width: 260px;
 }
 body.devinci-custom .social-sidebar .menu .accordion-group .accordion-heading .accordion-toggle {
-  color: #ffffff;
+  color: var(--color-devinci);
   padding: 16px 20px;
-  font-size: 16px;
-  background-color: #6758a2;
+  font-size: 15px;
+  background-color: var(--color-white);
   transition: all 0.3s;
 }
 body.devinci-custom .social-sidebar .menu .accordion-group .accordion-heading .accordion-toggle span {
   margin-left: 10px;
   font-weight: 300;
+  color: var(--color-devinci);
 }
 body.devinci-custom .social-sidebar .menu .accordion-group .accordion-heading .accordion-toggle img {
   display: none;
 }
 body.devinci-custom .social-sidebar .menu .accordion-group .accordion-heading .accordion-toggle:hover {
-  background-color: #ffffff;
-  color: #6758a2;
+  background-color: var(--color-iim);
+  color: var(--color-white);
 }
 body.devinci-custom .social-sidebar .menu .accordion-group .accordion-heading .accordion-toggle::after {
   content: none;
+}
+body.devinci-custom .social-sidebar .social-sidebar-content {
+  background-color: var(--color-white) !important;
+  border-right: none !important;
+  box-shadow: 1px 0px 20px rgba(44, 44, 44, 0.08);
 }
 body.devinci-custom .social-sidebar .social-sidebar-content::after {
   content: "ALV Online \a 2021 © Léonard de Vinci";
@@ -6333,54 +6371,25 @@ body.devinci-custom .social-sidebar .social-sidebar-content::after {
   right: 20px;
   font-size: 11px;
   text-align: center;
-  color: #ffffff;
+  color: var(--color-devinci);
   z-index: 1;
   white-space: pre;
   font-weight: 300;
 }
-body.devinci-custom .main-menu {
-  background: #6758A2;
-  margin-top: -20px;
-  margin-left: -20px;
-  margin-right: -20px;
-  text-align: left;
-  border-width: 1px !important;
-  border-style: solid !important;
-  border-color: rgba(0, 0, 0, 0.15) !important;
+body.devinci-custom .social-sidebar .menu-mobile-info {
+  display: none;
 }
-body.devinci-custom .main-menu .btn {
-  background-image: none;
-  border: none;
-  text-shadow: none;
-  color: white;
-  font-size: 0.925rem;
-  line-height: 1.35;
-  border-radius: 0;
-  background-color: transparent;
-  padding: 20px;
+body.devinci-custom .site-menubar.site-menubar-light {
+  background-color: var(--color-iim);
   box-shadow: none;
-  transition: all 0.3s;
 }
-body.devinci-custom .main-menu .btn:hover {
-  color: #6758a2 !important;
-  background: #ffffff !important;
+body.devinci-custom .site-menubar-light .site-menu-item > a {
+  color: var(--color-white);
+  font-weight: 600;
+  letter-spacing: 1px;
 }
-body.devinci-custom .main-menu .btn:hover .caret {
-  border-top: 4px solid #6758a2;
-}
-body.devinci-custom .main-menu .btn i, body.devinci-custom .main-menu .btn svg {
-  margin-right: 8px;
-}
-body.devinci-custom .main-menu .btn .caret {
-  border-top: 4px solid #ffffff;
-  margin-left: 3px;
-}
-body.devinci-custom .main-menu .dropdown-menu {
-  background-color: #6758a2;
-}
-body.devinci-custom .main-menu .dropdown-menu a {
-  color: #ffffff;
-  text-align: left;
+body.devinci-custom .site-menubar-light .site-menu-sub a {
+  color: var(--color-devinci);
 }
 body.devinci-custom .btn-default {
   background-color: #e8e8e8;
@@ -6391,10 +6400,10 @@ body.devinci-custom .btn-default {
   background-image: none;
 }
 body.devinci-custom .alert {
-  background: #f3edfa !important;
-  color: #6758a2;
-  border: 1px solid rgba(0, 0, 0, 0.15) !important;
-  border-radius: 0.42rem;
+  background: var(--color-white) !important;
+  color: var(--color-devinci);
+  border: none !important;
+  border-radius: 0.32rem;
   padding: 20px;
 }
 body.devinci-custom .alert-info {
@@ -6412,7 +6421,7 @@ body.devinci-custom .alert-info .pull-right .btn {
   gap: 10px;
 }
 body.devinci-custom .social-box {
-  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  border: none !important;
   border-radius: 0.42rem;
   box-shadow: none;
 }
@@ -6437,6 +6446,7 @@ body.devinci-custom .social-box .body {
 }
 body.devinci-custom .social-box .social-box {
   box-shadow: none;
+  border: 1px solid rgba(170, 170, 170, 0.15) !important;
 }
 body.devinci-custom .social-box .social-box header {
   border-bottom: none;
@@ -6706,5 +6716,8 @@ body.devinci-custom #calendar .fc-event .fc-content .fc-title * {
 }
 body.devinci-custom #calendar .fc-ltr .fc-time-grid .fc-event-container {
   margin: 0 3px;
+}
+body.devinci-custom .social-sidebar .switch-sidebar-icon {
+  color: #000;
 }
 /*# sourceMappingURL=all.css.map */

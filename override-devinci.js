@@ -26,65 +26,65 @@ document.querySelectorAll(".social-sidebar .menu .accordion-toggle").forEach(fun
 })
 
 // Remove photo section
-if(document.getElementById('div_photo_upl') != null) {
-    document.getElementById('div_photo_upl').remove()
-}
+// if(document.getElementById('div_photo_upl') != null) {
+//     document.getElementById('div_photo_upl').remove()
+// }
 
-// Add class to main menu
-console.log(document.querySelectorAll('.tools'))
-document.querySelectorAll('.tools')[0].classList.add('main-menu')
-// Change icons and text on main menu
-let iconMainMenu = [
-    ["fas", "fa-home", "Accueil"],
-    ["fas", "fa-calendar", 'Emploi du temps'],
-    ["fas", "fa-user-times", 'Mes absences'],
-    ["fas", "fa-file-signature", 'Attestations (alternance)'],
-    ["fas", "fa-thumbs-up", "Mes notes"],
-    ["fas", "fa-chalkboard-teacher", "Mes cours"],
-    ["fas", "fa-folder", "Documents"],
-    ["fab", "fa-black-tie", "Stages"],
-    ["fas", "fa-globe-americas", "International"],
-    ["fas", "fa-clipboard-check", "Rendus"],
-    ["fas", "fa-euro-sign", "Finances"],
-    ["fas", "fa-bullhorn", "Mes actions de promo."],
-    ["fas", "fa-exclamation", "Relevé de présence"]
-]
-let loopMainMenuIcon = 0
-document.querySelectorAll('.main-menu > a').forEach(function (item){
-    let iconMenu = item.querySelector('i')
-    iconMenu.className = "";
-    iconMenu.classList.add(iconMainMenu[loopMainMenuIcon][0])
-    iconMenu.classList.add(iconMainMenu[loopMainMenuIcon][1])
-    console.log(item.childNodes[2])
-    console.log(iconMainMenu[loopMainMenuIcon][2])
-    item.childNodes[2].textContent = iconMainMenu[loopMainMenuIcon][2]
-    loopMainMenuIcon++
-    //
+// // Add class to main menu
+// console.log(document.querySelectorAll('.tools'))
+// document.querySelectorAll('.tools')[0].classList.add('main-menu')
+// // Change icons and text on main menu
+// let iconMainMenu = [
+//     ["fas", "fa-home", "Accueil"],
+//     ["fas", "fa-calendar", 'Emploi du temps'],
+//     ["fas", "fa-user-times", 'Mes absences'],
+//     ["fas", "fa-file-signature", 'Attestations (alternance)'],
+//     ["fas", "fa-thumbs-up", "Mes notes"],
+//     ["fas", "fa-chalkboard-teacher", "Mes cours"],
+//     ["fas", "fa-folder", "Documents"],
+//     ["fab", "fa-black-tie", "Stages"],
+//     ["fas", "fa-globe-americas", "International"],
+//     ["fas", "fa-clipboard-check", "Rendus"],
+//     ["fas", "fa-euro-sign", "Finances"],
+//     ["fas", "fa-bullhorn", "Mes actions de promo."],
+//     ["fas", "fa-exclamation", "Relevé de présence"]
+// ]
+// let loopMainMenuIcon = 0
+// document.querySelectorAll('.main-menu > a').forEach(function (item){
+//     let iconMenu = item.querySelector('i')
+//     iconMenu.className = "";
+//     iconMenu.classList.add(iconMainMenu[loopMainMenuIcon][0])
+//     iconMenu.classList.add(iconMainMenu[loopMainMenuIcon][1])
+//     console.log(item.childNodes[2])
+//     console.log(iconMainMenu[loopMainMenuIcon][2])
+//     item.childNodes[2].textContent = iconMainMenu[loopMainMenuIcon][2]
+//     loopMainMenuIcon++
+//     //
 
-})
-// Add dropdown menu to main menu
-document.querySelector('.main-menu').insertAdjacentHTML('beforeend', "<div class=\"btn-group\">\n" +
-    "  <a class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">\n" +
-    "    <i class=\"fas fa-info\"></i> Voir plus \n" +
-    "    <span class=\"caret\"></span>\n" +
-    "  </a>\n" +
-    "  <ul class=\"dropdown-menu\">\n" +
-    "    <!-- dropdown menu links -->\n" +
-    "  </ul>\n" +
-    "</div>")
+// })
+// // Add dropdown menu to main menu
+// document.querySelector('.main-menu').insertAdjacentHTML('beforeend', "<div class=\"btn-group\">\n" +
+//     "  <a class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">\n" +
+//     "    <i class=\"fas fa-info\"></i> Voir plus \n" +
+//     "    <span class=\"caret\"></span>\n" +
+//     "  </a>\n" +
+//     "  <ul class=\"dropdown-menu\">\n" +
+//     "    <!-- dropdown menu links -->\n" +
+//     "  </ul>\n" +
+//     "</div>")
 
-// Place most unpopular items inside this dropdown
-document.querySelectorAll(".main-menu > a:nth-of-type(4),.main-menu > a:nth-of-type(8), .main-menu > a:nth-of-type(9), .main-menu > a:nth-of-type(10), .main-menu > a:nth-of-type(11), .main-menu > a:nth-of-type(12)").forEach(function (item){
-    let listItem = document.createElement('li') // <li> </li>
-    listItem.insertAdjacentElement('afterbegin', item) // <li> a href stage </li>
-    document.querySelector('.main-menu ul.dropdown-menu').insertAdjacentElement('beforeend', listItem)
-})
+// // Place most unpopular items inside this dropdown
+// document.querySelectorAll(".main-menu > a:nth-of-type(4),.main-menu > a:nth-of-type(8), .main-menu > a:nth-of-type(9), .main-menu > a:nth-of-type(10), .main-menu > a:nth-of-type(11), .main-menu > a:nth-of-type(12)").forEach(function (item){
+//     let listItem = document.createElement('li') // <li> </li>
+//     listItem.insertAdjacentElement('afterbegin', item) // <li> a href stage </li>
+//     document.querySelector('.main-menu ul.dropdown-menu').insertAdjacentElement('beforeend', listItem)
+// })
 
-// Url testing
-let url = window.location.href;
-if(url === "https://www.leonard-de-vinci.net/") {
-    document.querySelector(".social-box .body > .row-fluid:nth-of-type(2) > .span6 > .row-fluid").remove()
-}
+// // Url testing
+// let url = window.location.href;
+// if(url === "https://www.leonard-de-vinci.net/") {
+//     document.querySelector(".social-box .body > .row-fluid:nth-of-type(2) > .span6 > .row-fluid").remove()
+// }
 
 
 // Move main menu after the page title
@@ -97,15 +97,15 @@ if(url.includes('?')){
 }
 */
 
-let menu = document.querySelectorAll('#main > div.container-fluid .tools')[0];
-let title = document.querySelector('.page-title').parentElement
-title.insertAdjacentElement('beforebegin', menu)
-console.log(2)
+// let menu = document.querySelectorAll('#main > div.container-fluid .tools')[0];
+// let title = document.querySelector('.page-title').parentElement
+// title.insertAdjacentElement('beforebegin', menu)
+// console.log(2)
 
 // Move burger navigation on topbar
-var topbar = document.querySelector('.brand').parentElement
-topbar.insertAdjacentElement('afterbegin', document.querySelector('.navigation-sidebar'))
-console.log(3)
+// var topbar = document.querySelector('.brand').parentElement
+// topbar.insertAdjacentElement('afterbegin', document.querySelector('.navigation-sidebar'))
+// console.log(3)
 
 // Check if is mark page
 if(document.querySelector('.notes') != null) {
@@ -190,3 +190,37 @@ if(document.querySelectorAll('.fc-time') != null){
 console.log(7)
 
 //document.querySelector('.social-orange').closest('.social-box.social-blue ').insertAdjacentElement('afterend', document.querySelector('.social-orange'))
+
+
+/**
+ * Remove right main menu items
+ * Contains notifications, disconnect, flags...
+ */
+document.querySelector('.navbar-blue.social-navbar .nav.pull-right.nav-indicators').remove();
+
+
+/**
+ * Add custom title
+ * Instead of IIM logo & Student name
+ */
+document.querySelector('.navbar-inner-pres .navbar-inner-title').innerHTML = 'IIM - Digital School';
+
+
+/**
+ * Move burger menu
+ */
+let burger = document.querySelector(".navigation-sidebar")
+let mainMenu = document.querySelector('.navbar-inner-pres')
+mainMenu.insertAdjacentElement('afterbegin', burger)
+
+
+/**
+ * Add app download to main nav
+ */
+document.querySelector(".navbar.navbar-blue > .navbar-inner > .container-fluid").insertAdjacentHTML('beforeend', 
+    "<div class='download-app'>" + 
+    "<p>Télécharger l'application</p>" +
+    "<a href='https://apps.apple.com/fr/app/mydevinci/id1576224187'><i class='fab fa-apple'></i></a>" + 
+    "<a href='https://play.google.com/store/apps/details?id=fr.devinci.student&gl=FR'><i class='fab fa-google-play'></i></a>" +
+    "</div>"
+)
