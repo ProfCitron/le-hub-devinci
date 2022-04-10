@@ -6285,9 +6285,45 @@ body.devinci-custom #main .breadcrumb i {
   display: none;
 }
 body.devinci-custom #main .breadcrumb a {
-  color: #7e7e7e;
+  color: var(--color-devinci);
   font-size: 24px;
+  font-weight: 600;
+}
+body.devinci-custom #main .breadcrumb .custom-override-nav {
+  display: flex;
+  gap: 32px;
+  float: none !important;
+  margin-top: 20px;
+}
+body.devinci-custom #main .breadcrumb .custom-override-nav .override-nav {
+  width: 96px;
+  height: 96px;
+  background-color: var(--color-iim);
+  color: var(--color-white);
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 20px 0px !important;
+  transition: all 0.3s;
+}
+body.devinci-custom #main .breadcrumb .custom-override-nav .override-nav:hover {
+  background-color: var(--color-white);
+}
+body.devinci-custom #main .breadcrumb .custom-override-nav .override-nav:hover a {
+  color: var(--color-iim);
+}
+body.devinci-custom #main .breadcrumb .custom-override-nav .override-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-white);
+  width: 100%;
+  height: 100%;
+  gap: 8px;
   font-weight: 400;
+}
+body.devinci-custom #main .breadcrumb .custom-override-nav .override-nav a span {
+  font-size: 14px;
 }
 body.devinci-custom .social-sidebar {
   background-color: var(--color-white);
@@ -6628,56 +6664,35 @@ body.devinci-custom #calendar button {
 body.devinci-custom #calendar .fc-minor > td {
   border: none;
 }
-body.devinci-custom #calendar .fc-today {
-  background-color: #9B92C2;
-}
 body.devinci-custom #calendar .fc-event {
-  border: 3px solid #87A8E8;
   border-radius: 0;
-  background-color: #EEF0F8 !important;
-}
-body.devinci-custom #calendar .fc-event::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 30px;
-  background-color: #87A8E8;
-  z-index: 0;
+  --color-devinci: #9E9E9E;
+  background-color: var(--color-devinci) !important;
 }
 body.devinci-custom #calendar .fc-event.edt_cmo {
-  border-color: #FFCA77;
+  --color-devinci: #03A9F4;
 }
-body.devinci-custom #calendar .fc-event.edt_cmo::after {
-  background-color: #FFCA77;
-}
-body.devinci-custom #calendar .fc-event.edt_cmo .fc-title .salle {
-  background-color: #ffb23b;
-  box-shadow: 0 2px 4px rgba(255, 178, 59, 0.3);
+body.devinci-custom #calendar .fc-event.edt_arch {
+  --color-devinci: #FFC107;
 }
 body.devinci-custom #calendar .fc-event.salles_formeret {
-  border-color: #68DF7B;
+  --color-devinci: #009688;
 }
-body.devinci-custom #calendar .fc-event.salles_formeret::after {
-  background-color: #68DF7B;
-}
-body.devinci-custom #calendar .fc-event.salles_formeret .fc-title .salle {
-  background-color: #60cc71;
-  box-shadow: 0 2px 4px rgba(96, 204, 113, 0.37);
+body.devinci-custom #calendar .fc-event.edt_pulv {
+  --color-devinci: #9C27B0;
 }
 body.devinci-custom #calendar .fc-event .fc-content {
   height: 100%;
-  padding: 16px 20px;
+  padding: 12px;
   box-sizing: border-box;
 }
 body.devinci-custom #calendar .fc-event .fc-content .fc-title {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 100%;
-  color: #1c1c1c;
-  text-align: center;
+  color: var(--color-white);
+  text-align: left;
   font-size: 16px;
   font-weight: 600;
 }
@@ -6694,14 +6709,8 @@ body.devinci-custom #calendar .fc-event .fc-content .fc-title .type_cours {
   display: none;
 }
 body.devinci-custom #calendar .fc-event .fc-content .fc-title *:is(.salle) {
-  color: #fff;
+  color: var(--color-white);
   font-size: 13px;
-  background-color: #6f8abf;
-  width: 94%;
-  margin: 0 auto;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(111, 138, 191, 0.29);
-  padding: 4px 12px;
   box-sizing: border-box;
 }
 body.devinci-custom #calendar .fc-event .fc-content .fc-title *:is(.fc-time span, .prof) {
@@ -6709,13 +6718,40 @@ body.devinci-custom #calendar .fc-event .fc-content .fc-title *:is(.fc-time span
   font-size: 13px;
 }
 body.devinci-custom #calendar .fc-event .fc-content .fc-title * {
-  color: #1c1c1c;
-  text-align: center;
+  color: var(--color-white);
+  text-align: left;
   font-size: 16px;
   font-weight: 600;
 }
 body.devinci-custom #calendar .fc-ltr .fc-time-grid .fc-event-container {
   margin: 0 3px;
+}
+body.devinci-custom .edt-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 16px 0;
+}
+body.devinci-custom .edt-badges-card {
+  padding: 8px 16px;
+  color: var(--color-white);
+  background-color: var(--color-devinci);
+  border-radius: 8px;
+}
+body.devinci-custom .edt-badges-card.arche {
+  --color-devinci: #FFC107;
+}
+body.devinci-custom .edt-badges-card.online {
+  --color-devinci: #03A9F4;
+}
+body.devinci-custom .edt-badges-card.pole {
+  --color-devinci: #9C27B0;
+}
+body.devinci-custom .edt-badges-card.formeret {
+  --color-devinci: #009688;
+}
+body.devinci-custom .edt-badges-card.nd {
+  --color-devinci: #9E9E9E;
 }
 body.devinci-custom .social-sidebar .switch-sidebar-icon {
   color: #000;

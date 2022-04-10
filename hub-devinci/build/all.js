@@ -4466,6 +4466,7 @@
 }());
 
 // Add basic helpers classes
+let uri = window.location.href
 document.querySelector('body').classList.add('devinci-custom')
 console.log(1)
 
@@ -4670,7 +4671,7 @@ document.querySelector('.navbar-blue.social-navbar .nav.pull-right.nav-indicator
  * Add custom title
  * Instead of IIM logo & Student name
  */
-document.querySelector('.navbar-inner-pres .navbar-inner-title').innerHTML = 'IIM - Digital School';
+document.querySelector('.navbar-inner-pres .navbar-inner-title').innerHTML = 'IIM - Digital School (v1.1-beta - Moded by LPC)';
 
 
 /**
@@ -4691,3 +4692,80 @@ document.querySelector(".navbar.navbar-blue > .navbar-inner > .container-fluid")
     "<a href='https://play.google.com/store/apps/details?id=fr.devinci.student&gl=FR'><i class='fab fa-google-play'></i></a>" +
     "</div>"
 )
+
+/**
+ * Remove useless thing on main page
+ */
+if(uri == "https://www.leonard-de-vinci.net/") {
+    document.querySelector('#main .container-fluid > .row-fluid .body  > .row-fluid > .span6  > .row-fluid').remove()
+}
+
+/**
+ * Add custom buttons for UX navigation (you know)
+ */
+console.log(document.querySelector('#main .breadcrumb > div'))
+document.querySelector('#main .breadcrumb > div > a').remove()
+document.querySelector('#main .breadcrumb > div').classList.add('custom-override-nav')
+document.querySelector('#main .breadcrumb > div').insertAdjacentHTML('afterbegin', 
+    "<div class='override-nav'><a href='https://www.leonard-de-vinci.net/?my=edt'><i class='fas fa-calendar-day'></i><span>E.D.T</span></a></div>" + 
+    "<div class='override-nav'><a href='https://www.leonard-de-vinci.net/?my=marks'><i class='fas fa-chalkboard-teacher'></i><span>Notes</span></a></div>" + 
+    "<div class='override-nav'><a href='https://www.leonard-de-vinci.net/student/presences/'><i class='fas fa-user-check'></i><span>Présence</span></a></div>"
+)
+
+/**
+ * Add course area indicators on better area (Uwu jeu de mot)
+ */
+ if(uri == "https://www.leonard-de-vinci.net/?my=edt") {
+    document.querySelector('#main .social-box').parentNode.insertAdjacentHTML('beforebegin', 
+    "<div class='row-fluid'><div class='span12' style='color:red;'><i>ATTENTION : LES COULEURS SONT ENCORE INCERTAINES (extension en beta) - MERCI DE NE PAS VOUS FIER QU'AUX COULEURS, SE FIER AUX SALLES INSCRITES</i></div></div>" +
+    "<div class='row-fluid'><div class='span12 edt-badges'>" +
+    "<div class='edt-badges-card arche'>Campus de l'arche</div>" + 
+    "<div class='edt-badges-card online'>Online - Zoom</div>" + 
+    "<div class='edt-badges-card pole'>Pôle la défense</div>" + 
+    "<div class='edt-badges-card formeret'>Espace Formeret</div>" + 
+    "<div class='edt-badges-card nd'>Non défini</div>" + 
+    "</div></div>"
+    )
+ }
+
+
+/**
+ * Duplicate time schedule to see today's course on col-4 and weekly courses on col-8
+ */
+ if(uri == "https://www.leonard-de-vinci.net/?my=edt") {
+    let originalSchedule = document.querySelector('#main .social-box')
+
+    // Remove legend
+    let nodeRemove = originalSchedule.querySelector('.body').childNodes
+    for(let i = 0; i < 13; i++) {
+        nodeRemove[0].remove()
+    }
+    // Remove orginals cols, and add cols matches the cloned element
+    originalSchedule.classList.remove('span12')
+    originalSchedule.classList.add('span4')
+    // Similate click on today for cloned element
+    originalSchedule.querySelector('.fc-agendaDay-button.fc-button.fc-state-default.fc-corner-right').click()
+
+    // Clone begin
+    let newSchedule = originalSchedule.cloneNode(true)
+    newSchedule.classList.add('day-scheduled')
+
+    // On original, re-add good cols number
+    originalSchedule.classList.remove('span4')
+    originalSchedule.classList.add('span8')
+
+    // Add clone to website
+    originalSchedule.insertAdjacentElement('beforebegin', newSchedule)
+
+    // Original keed weekly view
+    originalSchedule.querySelector(".fc-agendaWeek-button.fc-button.fc-state-default").click()
+
+    // Remove useless thing on cloned element
+    newSchedule.querySelector('header .pull-right').remove()
+    let scheduleDay = newSchedule.querySelector('#calendar h2').textContent
+    document.querySelector(".day-scheduled header h4").textContent = "Aujourd'hui : "+scheduleDay
+    newSchedule.querySelector('#calendar .fc-toolbar').remove()
+    newSchedule.querySelector('#calendar .fc-view-container .fc-head').remove()
+    newSchedule.querySelector('#calendar .fc-view-container .fc-day-grid').remove()
+    newSchedule.querySelector('#calendar .fc-view-container .fc-divider.fc-widget-header').remove()
+ }
