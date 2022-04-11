@@ -302,3 +302,10 @@ document.querySelector('#main .breadcrumb > div').insertAdjacentHTML('afterbegin
     newSchedule.querySelector('#calendar .fc-view-container .fc-day-grid').remove()
     newSchedule.querySelector('#calendar .fc-view-container .fc-divider.fc-widget-header').remove()
  }
+
+ /**
+  * Add classes based on page 
+ */
+if(uri == "https://www.leonard-de-vinci.net/") {
+    document.querySelector('body').classList.add("override-home")
+}

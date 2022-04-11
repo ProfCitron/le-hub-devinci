@@ -6130,6 +6130,7 @@ readers do not read off random characters that represent icons */
   --color-devinci: #1c1c1b;
   --color-iim: #ef7d00;
   --color-white: #ffffff;
+  --border-grey: rgba(170, 170, 170, 0.15);
 }
 
 /*
@@ -6167,11 +6168,15 @@ body.devinci-custom table td {
   vertical-align: middle;
   padding: 8px;
 }
+body.devinci-custom .sidebar-full .navbar-blue.social-navbar {
+  left: 260px !important;
+  width: calc(100% - 260px) !important;
+}
 body.devinci-custom .navbar-blue.social-navbar {
   position: relative;
   margin: 0;
   left: 260px;
-  width: calc(100% - 260px);
+  width: calc(100% - 54px);
 }
 body.devinci-custom .navbar-blue.social-navbar .navbar-inner {
   position: relative;
@@ -6250,6 +6255,10 @@ body.devinci-custom .navbar-blue.social-navbar .navbar-inner .container-fluid .n
 }
 body.devinci-custom #footer.footer-sidebar-full {
   display: none;
+}
+body.devinci-custom .sidebar-full #main {
+  margin-left: 280px !important;
+  margin-right: 20px !important;
 }
 body.devinci-custom #main {
   padding-bottom: 0;
@@ -6487,6 +6496,48 @@ body.devinci-custom .social-box .social-box {
 body.devinci-custom .social-box .social-box header {
   border-bottom: none;
 }
+body.devinci-custom.override-home .advanced-tab {
+  display: flex;
+}
+body.devinci-custom.override-home .advanced-tab > ul {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  border: none !important;
+  box-shadow: none !important;
+}
+body.devinci-custom.override-home .advanced-tab > ul li {
+  border: 1px solid rgba(170, 170, 170, 0.15);
+  padding: 6px 12px;
+}
+body.devinci-custom.override-home .advanced-tab > ul li.active {
+  background-color: #e5e5e5 !important;
+}
+body.devinci-custom.override-home .advanced-tab > ul li.active a {
+  background-color: none !important;
+  text-shadow: none !important;
+  border: none !important;
+}
+body.devinci-custom.override-home .advanced-tab > div {
+  width: 60%;
+  display: flex;
+}
+body.devinci-custom.override-home .advanced-tab > div header {
+  display: none;
+}
+body.devinci-custom.override-home .advanced-tab > div ul .accordion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+body.devinci-custom.override-home .advanced-tab > div ul .accordion .accordion-group {
+  border: none;
+}
+body.devinci-custom.override-home .advanced-tab > div ul .accordion .accordion-group .accordion-heading {
+  padding: 6px 18px;
+  border-radius: 20px;
+}
 body.devinci-custom.custom-notes .notes-main header {
   display: flex;
   flex-direction: row-reverse;
@@ -6509,16 +6560,22 @@ body.devinci-custom.custom-notes .notes-main .body .btn-group > .btn span {
 body.devinci-custom.custom-notes .notes-main .body .notes *:hover {
   color: #1c1c1b !important;
 }
+body.devinci-custom.custom-notes .notes-main .body .notes .dd > .dd-list > .dd-item {
+  margin-top: 40px;
+}
 body.devinci-custom.custom-notes .notes-main .body .notes .dd > .dd-list > .dd-item > .dd-handle {
   background: none;
-  text-align: center;
-  font-size: 20px;
+  text-align: left;
+  font-size: 28px;
   font-weight: 600;
   margin-bottom: 10px;
   border: none;
+  margin-left: 22px;
 }
 body.devinci-custom.custom-notes .notes-main .body .notes .dd > .dd-list > .dd-item .dd-list.notes-ue {
   padding: 10px 20px;
+  margin: 0 30px;
+  border: 1px solid var(--border-grey);
 }
 body.devinci-custom.custom-notes .notes-main .body .notes .dd > .dd-list > .dd-item .dd-list.notes-ue .dd-unite-student {
   background: none;
@@ -6537,6 +6594,20 @@ body.devinci-custom.custom-notes .notes-main .body .notes .dd > .dd-list > .dd-i
 body.devinci-custom.custom-notes .notes-main .body .notes .dd > .dd-list > .dd-item .dd-list.notes-ue .dd-unite-student > .dd-handle i {
   display: none;
 }
+body.devinci-custom.custom-notes .notes-main .body .notes .dd > .dd-list > .dd-item .dd-list.notes-ue .dd-unite-student > .dd-handle .pull-right, body.devinci-custom.custom-notes .notes-main .body .notes .dd > .dd-list > .dd-item .dd-list.notes-ue .dd-unite-student > .dd-handle .text-info {
+  display: none;
+}
+body.devinci-custom.custom-notes .notes-main .body .notes .dd > .dd-list > .dd-item .dd-list.notes-ue .dd-unite-student > .dd-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+body.devinci-custom.custom-notes .notes-main .body .notes .dd > .dd-list > .dd-item .dd-list.notes-ue .dd-unite-student > .dd-list > li {
+  height: 100%;
+}
+body.devinci-custom.custom-notes .notes-main .body .notes .dd > .dd-list > .dd-item .dd-list.notes-ue .dd-unite-student > .dd-list > li > div {
+  height: 100%;
+}
 body.devinci-custom.custom-notes .notes-main .body .notes .dd-unite-student .dd-list {
   padding-left: 0;
 }
@@ -6553,16 +6624,17 @@ body.devinci-custom.custom-notes .notes-main .body .notes .dd-unite-student .dd-
 body.devinci-custom.custom-notes .notes-main .body .notes .dd-unite-student .dd-list .dd-module .dd-handle {
   border: none;
   background: #EEF0F8;
-  padding: 16px 20px;
+  padding: 20px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 body.devinci-custom.custom-notes .notes-main .body .notes .dd-unite-student .dd-list .dd-module .dd-handle i {
   display: none;
 }
 body.devinci-custom.custom-notes .notes-main .body .notes .dd-unite-student .dd-list .dd-module .dd-handle .label:not(:is(.label-important)) {
   pointer-events: none;
-  font-size: 12px;
+  font-size: 13px;
   color: #1c1c1c;
   border: none;
   font-weight: 400;
@@ -6592,42 +6664,46 @@ body.devinci-custom.custom-notes .notes-main .body .notes .dd-unite-student .dd-
 }
 body.devinci-custom.custom-notes .notes-main .body .notes .dd-unite-student .dd-list .dd-module .dd-handle .text-info {
   pointer-events: none;
-  font-size: 12px;
+  font-size: 13px;
   color: #1c1c1c;
   border: none;
   font-weight: 400;
   text-shadow: none;
   padding-left: 0;
+  order: 2;
+  text-align: center;
 }
 body.devinci-custom.custom-notes .notes-main .body .notes .dd-unite-student .dd-list .dd-module .dd-handle > * {
   float: none;
-  flex-basis: 50%;
-  flex-grow: 1;
-}
-body.devinci-custom.custom-notes .notes-main .body .notes .dd-unite-student .dd-list .dd-module .dd-handle > *:last-child {
-  align-self: flex-start;
-  text-align: right;
-}
-body.devinci-custom.custom-notes .notes-main .body .notes .dd-unite-student .dd-list .dd-module .dd-handle > *:nth-child(even) {
-  text-align: right;
+  height: auto;
 }
 body.devinci-custom.custom-notes .notes-main .body .notes .dd-unite-student .dd-list .dd-module .dd-handle .module-name {
-  font-size: 16px;
-  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-align: center;
+  order: 1;
+}
+body.devinci-custom.custom-notes .notes-main .body .notes .dd-unite-student .dd-list .dd-module .dd-handle .pull-right {
+  order: 3;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
 }
 body.devinci-custom.custom-notes .notes-main .body .notes .dd-unite-student .dd-list .dd-module .dd-handle .note_commentaire {
   background: none;
-  text-align: left;
+  text-align: center !important;
   font-style: normal;
+  order: 4;
 }
 body.devinci-custom.custom-notes .notes-main .body .notes .dd-unite-student .dd-list .dd-module .dd-handle .note_commentaire::before, body.devinci-custom.custom-notes .notes-main .body .notes .dd-unite-student .dd-list .dd-module .dd-handle .note_commentaire::after {
   content: '"';
 }
 body.devinci-custom.custom-notes .notes-main .body .notes .dd-unite-student .dd-list .dd-module .dd-handle .badge, body.devinci-custom.custom-notes .notes-main .body .notes .dd-unite-student .dd-list .dd-module .dd-handle .badge.badge-important, body.devinci-custom.custom-notes .notes-main .body .notes .dd-unite-student .dd-list .dd-module .dd-handle .badge.badge-warning {
   margin-right: 0 !important;
-  padding: 8px 16px;
+  padding: 14px 28px;
   border-radius: 20px;
-  font-size: 12px;
+  font-size: 18px;
   margin-bottom: 7px;
   font-weight: 600;
   background-color: #6758a2;
@@ -6644,9 +6720,12 @@ body.devinci-custom.custom-notes .social-box .social-box {
 body.devinci-custom.custom-notes table td:first-child, body.devinci-custom.custom-notes table td:nth-of-type(3) {
   display: none;
 }
+body.devinci-custom.custom-notes table td:last-child {
+  text-align: right;
+}
 body.devinci-custom.custom-notes table td .btn {
-  background: #6758a2;
-  color: #ffffff;
+  background: var(--color-devinci);
+  color: var(--color-white);
   border-radius: 0.42rem;
   border: none;
   box-shadow: none;

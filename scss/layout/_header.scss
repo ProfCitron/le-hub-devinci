@@ -1,9 +1,13 @@
 // Official name of the little top menu
+.sidebar-full .navbar-blue.social-navbar {
+  left: 260px !important;
+  width: calc(100% - 260px) !important;
+}
 .navbar-blue.social-navbar {
   position: relative;
   margin: 0;
   left: 260px;
-  width: calc(100% - 260px);
+  width: calc(100% - 54px);
 
   // 1/2 child
   .navbar-inner {
